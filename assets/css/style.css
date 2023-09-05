@@ -62,8 +62,29 @@ body {
 .search button img {
     width: 16px;
 }
-
+    
 .current-info p {
     font-size: 20px;
     margin-bottom: 10px;
 }
+
+.current-weather {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.forecast-img {
+    width: 60px;
+    height: 60px;
+}
+
+
