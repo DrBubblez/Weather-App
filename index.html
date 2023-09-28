@@ -15,35 +15,60 @@
 
   <body>
         
-    <card class="card">
-      <div class="container-fluid">
-        <h1>Weather Dash</h1>
-        <form class="search">
-          <input class="form-control sm-2" type="search" placeholder="Search City" aria-label="Search">
-          <button type="submit"><img src="./assets/img/search.png">Search</button>
-        </form>
-      </div>
-    </card>
-
-   <card class="current-weather card">
-      <h2>Current Weather</h2>
+  <header class="card mb-3">
+    <div class="container-fluid">
+      <h1>Weather Dash</h1>
+      <form class="search">
+        <input class="form-control sm-2" type="search" placeholder="Search City" aria-label="Search">
+        <div class="recent-searches"></div>
+        <button type="submit">
+          <img src="./assets/img/search.png" alt="Search Icon">
+        </button>
+      </form>
+    </div>
+  </header>
+  <main class="container-fluid row">
+      <div class="current-weather card col-md-4">
+        <h2>Current Weather</h2>
         <div>
           <img id="icon" src="./assets/img/clear.png">
         </div>
         <div class="current-info">
           <h3 id="city">City Name</h3>
-          <p id="temp">Temperature: 75</p>
-          <p id="humid">Humidity: 50</p>
-          <p id="wind">Wind Speed: 10</p>
-          <p id="uv">UV Index: 5</p>
+          <p id="temp"><img src="assets/img/thermometer.png">Temperature: 75</p>
+          <p id="humid"><img src="/assets/img/humidity.png">Humidity: 50</p>
+          <p id="wind"><img src="/assets/img/wind.png">Wind Speed: 10</p>
+          <p id="uv"><img src="/assets/img/rays.png">UV Index: 5</p>
         </div>
-   </card>
-
-   <div class="container">  
-    <div class="row">
-      <div class="col-sm-2">
-        <card class="card">
-          <h3>Day 1</h3>
+      </div>
+      <div class="col-md-8">
+        <div class="forecast row">
+          <div class="forecast-card card col">
+            <h3>Day 1</h3>
+            <div>
+              <img class="forecast-img" id="icon" src="./assets/img/clear.png">
+            </div>
+            <div class="forecast-info">
+              <p id="temp">Temperature: 75</p>
+              <p id="humid">Humidity: 50</p>
+              <p id="wind">Wind Speed: 10</p>
+              <p id="uv">UV Index: 5</p>
+            </div>
+          </div>
+          <div class="forecast-card card col">
+            <h3>Day 2</h3>
+            <div>
+              <img class="forecast-img" id="icon" src="./assets/img/clear.png">
+            </div>
+            <div class="forecast-info">
+              <p id="temp">Temperature: 75</p>
+              <p id="humid">Humidity: 50</p>
+              <p id="wind">Wind Speed: 10</p>
+              <p id="uv">UV Index: 5</p>
+            </div>
+          </div>
+          <div class="forecast-card card col">
+          <h3>Day 3</h3>
           <div>
             <img class="forecast-img" id="icon" src="./assets/img/clear.png">
           </div>
@@ -53,13 +78,36 @@
             <p id="wind">Wind Speed: 10</p>
             <p id="uv">UV Index: 5</p>
           </div>
-        </card>
+          </div>
+          <div class="forecast-card card col">
+          <h3>Day 4</h3>
+          <div>
+            <img class="forecast-img" id="icon" src="./assets/img/clear.png">
+          </div>
+          <div class="forecast-info">
+            <p id="temp">Temperature: 75</p>
+            <p id="humid">Humidity: 50</p>
+            <p id="wind">Wind Speed: 10</p>
+            <p id="uv">UV Index: 5</p>
+          </div>
+          </div>
+          <div class="forecast-card card col">
+          <h3>Day 5</h3>
+          <div>
+            <img class="forecast-img" id="icon" src="./assets/img/clear.png">
+          </div>
+          <div class="forecast-info">
+            <p id="temp">Temperature: 75</p>
+            <p id="humid">Humidity: 50</p>
+            <p id="wind">Wind Speed: 10</p>
+            <p id="uv">UV Index: 5</p>
+          </div>
+        </div>
+      </div>
+  </main>
 
-   </div>
- 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 
   </body>
 

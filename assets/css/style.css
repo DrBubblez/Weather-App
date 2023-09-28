@@ -62,29 +62,70 @@ body {
 .search button img {
     width: 16px;
 }
+
+.recent-searches {
+    display: none; /* Initially hidden */
+    border: 1px solid #ccc;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    position: absolute; /* Makes it float over other elements */
+    width: calc(100% - 76px); /* Adjust width if needed */
+    z-index: 10; /* Makes it appear on top */
+}
+
+.recent-searches p {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.recent-searches p:hover {
+    background-color: #f7f7f7;
+}
     
 .current-info p {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
 .current-weather {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    width: 300px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 20px;
+.current-weather p img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
 }
 
 .forecast-img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
 }
 
+.forecast {
+    padding-top: 140px;
+}
 
+.forecast-info {
+    width: auto;
+}
+
+.forecast-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.search button:hover {
+    background-color: #e0e0e0;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
