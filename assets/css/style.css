@@ -64,14 +64,14 @@ body {
 }
 
 .recent-searches {
-    display: none; /* Initially hidden */
+    display: none;
     border: 1px solid #ccc;
     max-height: 150px;
     overflow-y: auto;
     background-color: #fff;
-    position: absolute; /* Makes it float over other elements */
-    width: calc(100% - 76px); /* Adjust width if needed */
-    z-index: 10; /* Makes it appear on top */
+    position: absolute;
+    width: calc(100% - 76px);
+    z-index: 10;
 }
 
 .recent-searches p {
@@ -93,9 +93,9 @@ body {
     width: 300px;
 }
 
-.current-weather p img {
-    width: 50px;
-    height: 50px;
+.current-info img {
+    width: 60px;
+    height: 60px;
     margin: 10px;
 }
 
