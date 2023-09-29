@@ -31,10 +31,29 @@ $(document).ready(function() {
                 $(`.forecast-info:eq(${i}) .temp`).text(`Temperature: ${forecastData.main.temp}°F`);
                 $(`.forecast-info:eq(${i}) .humid`).text(`Humidity: ${forecastData.main.humidity}%`);
                 $(`.forecast-info:eq(${i}) .wind`).text(`Wind Speed: ${forecastData.wind.speed} MPH`);
+                const forecastIcon = weatherIcon(forecastData.weather[0].main);
+                $(`.forecast-card:eq(${i}) .icon`).attr('src', `./assets/img/${forecastIcon}`);
             }
         });
     }
 });
+
+function weatherIcon(weatherDescription) {
+    switch (weatherDescription) {
+        case 'Clear':
+            return 'clear.png';
+        case 'Clouds':
+            return 'clouds.png';
+        case 'Rain':
+            return 'rain.png';
+        case 'Thunderstorm':
+            return 'storm.png';
+        case 'Snow':
+            return 'snow.png';
+        default:
+            return 'clear.png'; 
+    }
+}
 
 const searchForm = document.querySelector('.search');
 const recentSearches = document.querySelector('.recent-searches');
@@ -65,6 +84,8 @@ function displayWeather(data) {
     document.querySelector('.temp').textContent = `Temperature: ${data.temp}°F`;
     document.querySelector('.humid').textContent = `Humidity: ${data.humidity}%`;
     document.querySelector('.wind').textContent = `Wind Speed: ${data.wind} MPH`;
+    const weatherIconName = weatherIcon(data.icon.toLowerCase());
+    document.querySelector('.current-weather .icon').src = `./assets/img/${weatherIconName}`;
 }
 
 function fetchWeatherData(city) {
@@ -81,7 +102,7 @@ function fetchWeatherData(city) {
                 temp: data.main.temp,
                 humidity: data.main.humidity,
                 wind: data.wind.speed,
-                icon: data.weather[0].icon
+                icon: data.weather[0].main
             };
         displayWeather(weatherData);
     });
