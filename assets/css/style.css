@@ -9,6 +9,7 @@ body {
     background: #361616;
 }
 
+
 .card {
     justify-self: center;
     width: 90%;
@@ -32,6 +33,7 @@ body {
 
 .search {
     width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between
@@ -65,23 +67,50 @@ body {
 
 .recent-searches {
     display: none;
-    border: 1px solid #ccc;
+    top: 60px;
     max-height: 150px;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: #3b3638;
     position: absolute;
-    width: calc(100% - 76px);
-    z-index: 10;
+    width: calc(100% - 166px);
+    border-radius: 42px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
 }
 
 .recent-searches p {
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #790e0e;
+    color: #cfcfcf;
+    transition: background-color 0.3s ease;
+}
+
+.recent-searches p:last-child {
+    border-bottom: none;
 }
 
 .recent-searches p:hover {
-    background-color: #f7f7f7;
+    background-color: #790e0e;
+    color: #fff;
+}
+
+.recent-searches::-webkit-scrollbar {
+    width: 8px;
+}
+
+.recent-searches::-webkit-scrollbar-track {
+    background: #3b3638;
+    border-radius: 4px;
+}
+
+.recent-searches::-webkit-scrollbar-thumb {
+    background: #790e0e;
+    border-radius: 4px;
+}
+
+.recent-searches::-webkit-scrollbar-thumb:hover {
+    background: #a01818;
 }
     
 .current-info p {
